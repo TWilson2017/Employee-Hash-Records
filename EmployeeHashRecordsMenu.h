@@ -14,7 +14,7 @@ class EmployeeHashRecordsMenu
 		bool Deleted[17]; //Flag to detect if slot is empty b/c of deletion
 		int Size; //Determine if Hash Table is empty
 	public:
-	    //Construct a New Hash Table
+	        //Construct a New Hash Table
 		EmployeeHashRecordsMenu();
 		//Read Records from a File
 		void CreateHashTable(); 
@@ -80,7 +80,7 @@ class EmployeeHashRecordsMenu
 		//Prompt for & Validate Department Code 
 		void GetDepartmentCode(char&);
 		//Prompt for Phone Number 
-	    void GetPhoneNumber(char (&)[12]);
+	        void GetPhoneNumber(char (&)[12]);
 		//Validate Phone Number
 		void ValidatePhoneNumber(char (&)[12]);
 		//Determines if year is Leap Year
@@ -93,7 +93,7 @@ class EmployeeHashRecordsMenu
 		void ModifyData(int Hash_Key, char phone_number2[12]);
 		//Validate Numbers
 		void Validate_Numbers(int&, string);	
-	    //Delete Memory for ALL Internal Components
+	        //Delete Memory for ALL Internal Components
 		~EmployeeHashRecordsMenu();
 };//EmployeeHashRecordsMenu
 #endif
