@@ -3,23 +3,23 @@
                                                    Employee Report
                                                    ***************
 
-Last Name    Acct. Number           Date of Birth           Annual Salary             Department Code          Age
-Kate		    0101*               Oct. 10, 1995              9890.98                  	T                  	22
+Last Name    Acct. Number           Date of Birth           Annual Salary         Department Code          Age
+Kate		      0101*               Oct. 10, 1995              9890.98                  	T                  	22
 Joe		        0393                Dec. 12, 1989             34589.90                  	C                  	28
 Thomas		    0037                Jan. 01, 1989              3455.90                  	D                  	29
 Driven		    0989*               Nov. 13, 1978             45000.00                  	A                  	39
-Mark		    9080*               Oct. 11, 1959            101001.00                  	X                  	58
-Mary		    0074                Jan. 12, 1989             23432.90                  	D                  	29
+Mark		      9080*               Oct. 11, 1959            101001.00                  	X                  	58
+Mary		      0074                Jan. 12, 1989             23432.90                  	D                  	29
 Kee		        0074*               Mar. 20, 1980             23500.30                  	B                  	38
 Ted		        0989*               Jan. 01, 1980             90939.10                  	A                  	38
 donals		    0111                Sep. 21, 1987             39302.90                  	S                  	31
-Ralph		    0010                Oct. 08, 1998              9000.99                  	V                  	19
-Betty		    0904*               Oct. 06, 1994             90390.10                  	C                  	23
-Mark		    0888*               Oct. 09, 1998             38495.00                  	C                  	19
-Mike		    0115                Oct. 05, 1999             10000.10                  	C                  	18
+Ralph		      0010                Oct. 08, 1998              9000.99                  	V                  	19
+Betty		      0904*               Oct. 06, 1994             90390.10                  	C                  	23
+Mark		      0888*               Oct. 09, 1998             38495.00                  	C                  	19
+Mike		      0115                Oct. 05, 1999             10000.10                  	C                  	18
 Joe		        0234*               Dec. 10, 1990             45000.00                  	A                  	27
-Alice		    0984                Nov. 21, 1986             22020.90                  	B                  	31
-Brook		    0849                Sep. 09, 1999             98908.90                  	D                  	19
+Alice		      0984                Nov. 21, 1986             22020.90                  	B                  	31
+Brook		      0849                Sep. 09, 1999             98908.90                  	D                  	19
 
 
 Total Annual Salary: 684928.97
