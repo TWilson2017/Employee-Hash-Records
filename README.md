@@ -1,4 +1,4 @@
-															HashingMenu.cpp
+								HashingMenu.cpp
 
  Write a C++ program that inputs an unknown number of records from a 
  sequential file. Write a C++ menu-program to create a hash table (containing 17 slots to store records)
@@ -23,4 +23,4 @@ HASH TABLE UPDATE SYSTEM
 3) Modify a record
 4) Delete a record
 5) Print Report
-6) Quit # Employee-Hash-Records
+6) Quit
