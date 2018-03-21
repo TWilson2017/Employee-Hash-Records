@@ -23,7 +23,7 @@ EmployeeHashRecordsMenu :: EmployeeHashRecordsMenu()
 {
 	//Initialize TotalAnnualSalary & TotalRecords to 0
 	TotalAnnualSalary = 0.00;
-    TotalRecords = 0;
+        TotalRecords = 0;
 
 	//Create a New Hash Table with 17 elements
 	HashTable = new HashNode*[TableSize];
@@ -61,7 +61,7 @@ void EmployeeHashRecordsMenu :: CreateHashTable()
 	//Test File For Error
 	if(inF.fail())
 	{
-		   cout << endl << "FATAL ERROR: UNABLE TO OPEN FILE \"data_MST\". TERMINATING..."
+ 	   cout << endl << "FATAL ERROR: UNABLE TO OPEN FILE \"data_MST\". TERMINATING..."
                 << endl << endl;
            exit (1);
 	}//if
@@ -93,7 +93,7 @@ void EmployeeHashRecordsMenu :: CreateHashTable()
 			dept_code6 = toupper(dept_code6);
 			
 			//Add One TotalRecords
-		    TotalRecords++;
+		        TotalRecords++;
 			
 			//Add annual_salary6 to TotalAnnualSalary
 			TotalAnnualSalary += annual_salary6;
@@ -131,7 +131,7 @@ int EmployeeHashRecordsMenu :: HashFunction(int key)
 //-| 4. Insert Records into Table
 //-|---------------------------------
 void EmployeeHashRecordsMenu :: Insert(char last_name2[15],char first_name2[15], int account_num2, int month2, int day2,
-									   int year2, double annual_salary2, char dept_code2, char phone_number2[12])
+				       int year2, double annual_salary2, char dept_code2, char phone_number2[12])
 {
 	//Declare Variables
 	int sub_script; //Variable to store probing location
@@ -206,7 +206,7 @@ void EmployeeHashRecordsMenu :: Insert(char last_name2[15],char first_name2[15],
 					{
 						//Add data into open slot
 						HashTable[sub_script] = new HashNode(last_name2, first_name2, account_num2, month2, day2,
-															 year2, annual_salary2, dept_code2, phone_number2);
+										     year2, annual_salary2, dept_code2, phone_number2);
 						//Assign CollisionFlag[] to 1
 						CollisionFlag[sub_script] = 1;
 						
@@ -229,38 +229,38 @@ string EmployeeHashRecordsMenu :: Date(int month3)
 {
    //Declare Array To Hold Month Abbreviation
    const string DateAbbr[12] = {"Jan. ", "Feb. ", "Mar. ", "Apr. ", 
-		                        "May ", "Jun. ", "Jul. ", "Aug. ", 
-						        "Sep. ", "Oct. ", "Nov. ", "Dec. "};
+		                "May ", "Jun. ", "Jul. ", "Aug. ", 
+				"Sep. ", "Oct. ", "Nov. ", "Dec. "};
 	
    //Convert Month into Abbreviation
    switch(month3)
    {
 	   case 1:  return DateAbbr[0];
-		        break;
+		    break;
 	   case 2:  return DateAbbr[1];
-		        break;
+		    break;
 	   case 3:  return DateAbbr[2];
-		        break;
+		    break;
 	   case 4:  return DateAbbr[3];
-			    break;
+		    break;
 	   case 5:  return DateAbbr[4];
-		        break;
+		    break;
 	   case 6:  return DateAbbr[5];
-			    break;
+		    break;
 	   case 7:  return DateAbbr[6];
-			    break;
+		    break;
 	   case 8:  return DateAbbr[7];
-			    break;
+		    break;
 	   case 9:  return DateAbbr[8];
-		        break;
+		    break;
 	   case 10: return DateAbbr[9];
-			    break;
+		    break;
 	   case 11: return DateAbbr[10];
-				break;
+		    break;
 	   case 12: return DateAbbr[11];
-				break;
+		    break;
 	   default: return ("Wrong Month Inserted....");
-		        break;
+		    break;
    }//Switch
 }//Date
 			  
@@ -297,7 +297,7 @@ int EmployeeHashRecordsMenu :: GetAge(int &Month5, int &Day5, int &Year5)
 	int Date2[] = {Month2, Day2, Year2};
 
 	//Subtract Date From Given Date
-    tm a = {0,0,0,Day5,Month5,Year5};
+        tm a = {0,0,0,Day5,Month5,Year5};
 	tm b = {0,0,0,Day2,Month2,Year2};
 	time_t x = mktime(&a);
 	time_t y = mktime(&b);
@@ -306,11 +306,11 @@ int EmployeeHashRecordsMenu :: GetAge(int &Month5, int &Day5, int &Year5)
 	if(x != (time_t)(-1) && y != (time_t)(-1))
 	{
 		    //Declare Variables to Convert Employee's Birthday into Their Age
-            double difference = difftime(y,x)/(60*60*24);
+                    double difference = difftime(y,x)/(60*60*24);
 		    int rounding = (int)round(difference);
-			int year = rounding/365;
-			int days = rounding%365;
-			int months = days/30;
+		    int year = rounding/365;
+		    int days = rounding%365;
+		    int months = days/30;
 		
 			//-|-------------------------------------
 			//-| 7[extra]. Convert The Date into Age
@@ -320,10 +320,10 @@ int EmployeeHashRecordsMenu :: GetAge(int &Month5, int &Day5, int &Year5)
 			if(year >= 1 && months >= 6 && days >= 183)
 				return (year+1);
 			//If year is >= 1 & months <= 5 & days <= 182 then, return the year as is
-		    else if(year >= 1 & months <= 5 && days <= 182)
+		        else if(year >= 1 & months <= 5 && days <= 182)
 				return (year);
 			//Else, return the 0
-		    else
+		        else
 				return 0;
 	}//if
 }//GetAge()
@@ -337,15 +337,15 @@ void EmployeeHashRecordsMenu :: PrintSubtitles(ostream& OutF)
 	cout << endl << endl << setw(66) << "Employee Report" << endl;
 	cout << setw(66) << "***************" << endl << endl;
 	cout << left << "Last Name" << right << setw(16) << "Acct. Number" 
-		 << right << setw(24) << "Date of Birth" << right << setw(24) << "Annual Salary"
-		 << right << setw(31) << "Department Code" << right << setw(18) << "Age" << endl; 
+	     << right << setw(24) << "Date of Birth" << right << setw(24) << "Annual Salary"
+	     << right << setw(31) << "Department Code" << right << setw(18) << "Age" << endl; 
 	
 	//Print Title & Subtitles to File
 	OutF << endl << endl << setw(66) << "Employee Report" << endl;
 	OutF << setw(66) << "***************" << endl << endl;
 	OutF << left << "Last Name" << right << setw(16) << "Acct. Number" 
-		 << right << setw(23) << "Date of Birth" << right << setw(24) << "Annual Salary"
-		 << right << setw(23) << "Department Code" << right << setw(13) << "Age" << endl; 
+	     << right << setw(23) << "Date of Birth" << right << setw(24) << "Annual Salary"
+	     << right << setw(23) << "Department Code" << right << setw(13) << "Age" << endl; 
 }//PrintSubtitles
 			  
 //-|-------------------------
@@ -427,13 +427,13 @@ EmployeeHashRecordsMenu :: ~EmployeeHashRecordsMenu()
 {
 	//Traverse through Hash Table
 	for(int i = 0; i < TableSize; i++)
-    {
+    	{
 		if (HashTable[i] != NULL)
 			delete HashTable[i];
-    }//for
+    	}//for
 	
 	//Delete the HashTable
-    delete[] HashTable;
+        delete[] HashTable;
 }//EmployeeHashRecordsMenu Destructor
 
 //-|------------------------------------------
@@ -446,7 +446,7 @@ void EmployeeHashRecordsMenu :: Print_Data_Collisions(int sub_script, ostream& O
 	{
 		cout << left << HashTable[sub_script]->last_name << "\t\t"; 
 		cout << setfill('0') << right << setw(4) << HashTable[sub_script]->account_num << '*';
-	    cout << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
+	        cout << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
 		cout << setfill('0') << setw(2) << HashTable[sub_script]->day << ", " << HashTable[sub_script]->year;
 		cout << setfill(' ') << right << setw(21) << fixed << setprecision(2) << HashTable[sub_script]->annual_salary;
 		cout << right << setw(19) << "\t" << HashTable[sub_script]->dept_code;
@@ -458,7 +458,7 @@ void EmployeeHashRecordsMenu :: Print_Data_Collisions(int sub_script, ostream& O
 	{
 		OutF << left << HashTable[sub_script]->last_name << "\t\t"; 
 		OutF << setfill('0') << right << setw(4) << HashTable[sub_script]->account_num << '*';
-	    OutF << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
+	        OutF << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
 		OutF << setfill('0') << setw(2) << HashTable[sub_script]->day << ", " << HashTable[sub_script]->year;
 		OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << HashTable[sub_script]->annual_salary;
 		OutF << right << setw(19) << "\t" << HashTable[sub_script]->dept_code;
@@ -476,7 +476,7 @@ void EmployeeHashRecordsMenu :: Print_Non_Collision_Data(int sub_script, ostream
 	{
 		cout << left << HashTable[sub_script]->last_name << "\t\t"; 
 		cout << setfill('0') << right << setw(4) << HashTable[sub_script]->account_num << " ";
-	    cout << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
+	        cout << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
 		cout << setfill('0') << setw(2) << HashTable[sub_script]->day << ", " << HashTable[sub_script]->year;
 		cout << setfill(' ') << right << setw(21) << fixed << setprecision(2) << HashTable[sub_script]->annual_salary;
 		cout << right << setw(19) << "\t" << HashTable[sub_script]->dept_code;
@@ -488,7 +488,7 @@ void EmployeeHashRecordsMenu :: Print_Non_Collision_Data(int sub_script, ostream
 	{
 		OutF << left << HashTable[sub_script]->last_name << "\t\t"; 
 		OutF << setfill('0') << right << setw(4) << HashTable[sub_script]->account_num << " ";
-	    OutF << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
+	        OutF << setfill(' ') << right << setw(20) << Date(HashTable[sub_script]->month);
 		OutF << setfill('0') << setw(2) << HashTable[sub_script]->day << ", " << HashTable[sub_script]->year;
 		OutF << setfill(' ') << right << setw(21) << fixed << setprecision(2) << HashTable[sub_script]->annual_salary;
 		OutF << right << setw(19) << "\t" << HashTable[sub_script]->dept_code;
@@ -555,7 +555,7 @@ void EmployeeHashRecordsMenu :: AddData()
 		//Call GetAccountNumber() to Prompt & Validate Account Number
 		GetAccountNumber(account_num2);
 	
-	    //-|--------------------------------------------------------------
+	        //-|--------------------------------------------------------------
 		//-| 18[extra]. Search Hash Table for a Duplicate Account Number
 		//-|--------------------------------------------------------------
 		
@@ -645,9 +645,9 @@ void EmployeeHashRecordsMenu :: DumpRecords()
 		if(HashTable[sub_script] != NULL)
 		{
 			OutF << HashTable[sub_script]->first_name << " " << HashTable[sub_script]->last_name << " " << HashTable[sub_script]->account_num
-				 << " " << HashTable[sub_script]->month << " " << HashTable[sub_script]->day << " " << HashTable[sub_script]->year
-				 << " " << HashTable[sub_script]->annual_salary << " " << HashTable[sub_script]->dept_code << " " << HashTable[sub_script]->phone_number
-				 << endl;
+			     << " " << HashTable[sub_script]->month << " " << HashTable[sub_script]->day << " " << HashTable[sub_script]->year
+			     << " " << HashTable[sub_script]->annual_salary << " " << HashTable[sub_script]->dept_code << " " << HashTable[sub_script]->phone_number
+			     << endl;
 		}//if	
 	}//for
 	
@@ -857,13 +857,13 @@ void EmployeeHashRecordsMenu :: GetYear(int &Year)
 //-|-----------------------------
 void EmployeeHashRecordsMenu :: GetName(char (&LastName)[15], char (&FirstName)[15])
 {
-	    //Prompt for Last Name
-		cout << "Enter Last Name: ";
-		cin >> LastName;
+	//Prompt for Last Name
+	cout << "Enter Last Name: ";
+        cin >> LastName;
 			
-		//Prompt for First Name
-		cout << "Enter First Name: ";
-		cin >> FirstName;
+	//Prompt for First Name
+	cout << "Enter First Name: ";
+	cin >> FirstName;
 }//GetName
 
 //-|---------------------------------------
@@ -884,24 +884,24 @@ bool EmployeeHashRecordsMenu :: isValidDate(int month2, int day2, int year2)
 	const int MAX_YEAR = 9999;
 	const int MIN_YEAR = 1800;
 	
-	 // If year, month and day are not in given range, return false
-    if(year2 > MAX_YEAR || year2 < MIN_YEAR)
-      return false;
+	// If year, month and day are not in given range, return false
+    	if(year2 > MAX_YEAR || year2 < MIN_YEAR)
+      		return false;
  
-    //Handle February month with leap year
-    if(month2 == 2)
-    {
-        if (isLeap(year2))
-           return (day2 <= 29);
-        else
-           return (day2 <= 28);
-    }//if
+    	//Handle February month with leap year
+    	if(month2 == 2)
+    	{
+       	     if(isLeap(year2))
+                return (day2 <= 29);
+             else
+                return (day2 <= 28);
+    	}//if
  
     //Handle the months of April, June, Sept and Nov.
     if(month2 == 4 || month2 == 6 || month2 == 9 || month2 == 11)
-		return (day2 <= 30);
+	return (day2 <= 30);
  
-	//Return true, if date is valid
+    //Return true, if date is valid
     return true;
 }//isValidDate
 
@@ -1030,7 +1030,6 @@ void EmployeeHashRecordsMenu :: ValidatePhoneNumber(char (&char_PhoneNumber)[12]
 	const int PhoneNum_Value = 10; //Variable to determine if Phone Number has 10 values
 	const int Dashes_Value = 2; //Variable to determine if Phone Number has 2 dashes
 	int i = 0; //Loop Control Variable
-	
 		
 	//-|-----------------------------
 	//-| 37b. Validate Phone Number
@@ -1165,14 +1164,14 @@ void EmployeeHashRecordsMenu :: Validate_Numbers(int &Numberto_Convert, string P
 	cout << Prompt;
 	cin >> Convert_NUM;
 	
-    //Validate Number
-    while(is_NUM == false && i < Convert_NUM.size())
-    {
+    	//Validate Number
+    	while(is_NUM == false && i < Convert_NUM.size())
+    	{
 		//If any Convert_NUM characters do not contain a number, prompt user for a valid input
 		if((Convert_NUM[i] >= '0' && Convert_NUM[i] <= '9') == false)
 		{
 			cin.clear(); // clears error flags
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignore until maxed/newline is reached
+            		cin.ignore(numeric_limits<streamsize>::max(), '\n'); //ignore until maxed/newline is reached
 			
 			//Assign 0 to i
 			i = 0;
@@ -1188,7 +1187,7 @@ void EmployeeHashRecordsMenu :: Validate_Numbers(int &Numberto_Convert, string P
 		}//else
     }//while
 
-	//Create a object from the class stringstream to convert string into integer
+    //Create a object from the class stringstream to convert string into integer
     stringstream Convert(Convert_NUM);
  
     //Stream value into Numberto_Convert
