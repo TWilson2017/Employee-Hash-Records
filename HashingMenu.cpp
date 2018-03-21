@@ -39,36 +39,36 @@ void PerformCommand(int Command)
 	//Object for EmployeeHashRecordsMenu
 	static EmployeeHashRecordsMenu Data;
 	
-    //Switch to Perform the Desired Command
+        //Switch to Perform the Desired Command
 	switch(Command)
 	{
 		case 1: //Create Hash Table
-			    Data.CreateHashTable();
-			    break;
+			Data.CreateHashTable();
+			break;
 		case 2: //Add a Record
-				//Call AddData() Function
-				Data.AddData();
-			    break;
+		        //Call AddData() Function
+			Data.AddData();
+			break;
 		case 3: //Modify a Record
-				Data.Modify();
-			    break;
+			Data.Modify();
+			break;
 		case 4: //Delete
-				//Call DeleteRecord() Function
-			    Data.DeleteRecord();
-			    break;
+			//Call DeleteRecord() Function
+			Data.DeleteRecord();
+			break;
 		case 5: //Print Report
-	            //Call Print() Function
-	            Data.Print();
-			    break;
+	            	//Call Print() Function
+	            	Data.Print();
+			break;
 		case 6: //Quit the Program {Dump Records from Hash Table back into the file "data_MST}, then terminates the program
-				//Call DumpRecords() Function
-			    Data.DumpRecords();
-			    cout << endl << "TERMINATING PROGRAM." << endl;
-			    cout << "(c) 2018, Tishauna Wilson" << endl << endl;
-			    Data.Pause();
-				//Exit out of program
-			    exit(1);
-			    break;
+			//Call DumpRecords() Function
+			Data.DumpRecords();
+			cout << endl << "TERMINATING PROGRAM." << endl;
+			cout << "(c) 2018, Tishauna Wilson" << endl << endl;
+			Data.Pause();
+			//Exit out of program
+			exit(1);
+			break;
 		default:break;	
 	}//switch
 }//PerformCommand
@@ -103,8 +103,8 @@ int main()
 	   //Check for Commands that are out of Boundaries
 	   while((Command != 1) && (Command != 2) && (Command != 3) && (Command != 4) && (Command != 5) && (Command != 6))
 	   {
-			  //Re-Prompt & Validate Commands by using Validate_Numbers()
-			  Data.Validate_Numbers(Command, Re_EnterPrompt);
+	   	//Re-Prompt & Validate Commands by using Validate_Numbers()
+		Data.Validate_Numbers(Command, Re_EnterPrompt);
 	   }//while
 	 
 	   //Once a valid Command is entered, call the PerformCommand() function
