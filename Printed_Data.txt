@@ -3,7 +3,7 @@
                                                    Employee Report
                                                    ***************
 
-Last Name    Acct. Number           Date of Birth           Annual Salary         Department Code          Age
+Last Name    Acct. Number           Date of Birth         Annual Salary         Department Code          Age
 Kate		      0101*               Oct. 10, 1995              9890.98                  	T                  	22
 Joe		        0393                Dec. 12, 1989             34589.90                  	C                  	28
 Thomas		    0037                Jan. 01, 1989              3455.90                  	D                  	29
